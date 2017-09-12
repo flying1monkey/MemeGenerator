@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+
+<head>
+    <th:block th:fragment="MemeGenHead">
+
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+
+    <title>MemeGen</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"/>
+    <!-- Custom styles for this template -->
+    <link href="css/simple-sidebar.css" rel="stylesheet"/>
+    </th:block>
+</head>
+
+<body>
+<th:block th:fragment="MemeGenNav">
+
+<div id="wrapper">
+
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li class="sidebar-brand">
+                <a href="#">
+                    Meme Generator
+                </a>
+            </li>
+            <li>
+                <a href="/index">Home</a>
+            </li>
+            <li>
+                <a href="/creatememe">Make a new meme</a>
+            </li>
+            <li>
+                <a href="/viewmemes">View my memes</a>
+            </li>
+            <li>
+                <a href="/viewmymemes">View all memes</a>
+            </li>
+            <li>
+                <a href="/addimage">Upload an image</a>
+            </li>
+            <li>
+                <a href="#">Add transformations</a>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>
+        </ul>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+            <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Toggle Menu</a>
+        </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+</div>
+</th:block>
+<!-- /#wrapper -->
+<th:block th:fragment="MemeGenJS">
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/popper/popper.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- Menu Toggle Script -->
+<script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+</script>
+</th:block>
+</body>
+
+</html>

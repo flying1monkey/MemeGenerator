@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+</head>
+<body>
+<a href="/addimage">Add image</a>
+<div th:each="imag : ${images}">
+    <div th:if="${imag.imgUrl} != null">
+        <img th:src="${imag.imgUrl}"/>
+        <hr />
+    </div>
+    <h3 th:text="${imag.imgName}"/>
+</div>
+</body>
+</html>

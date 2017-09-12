@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>MemeGen</title>
+</head>
+<body>
+<br /><br />
+<h1>File Upload Example</h1>
+<form method="post" action="/addimage" th:object="${image}" enctype="multipart/form-data">
+    Name: <input type="text" th:field="*{imgName}"/>
+    <input type="file" name="file" />
+    <br /><br />
+    <input type="submit" value="Submit" />
+</form>
+</body>
+</html>
